@@ -12,14 +12,14 @@ local-out-zip-file := MIUI_G9350.zip
 local-previous-target-dir :=
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps :=
+local-modified-apps := SecSettingsProvider2
 
 local-modified-jars :=
 
 # All apks from MIUI
 local-miui-removed-apps :=  MediaProvider SettingsProvider
 
-local-miui-modified-apps := 
+local-miui-modified-apps :=
 
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,
 # Default configrations are HDPI for ics branch and XHDPI for jellybean branch
