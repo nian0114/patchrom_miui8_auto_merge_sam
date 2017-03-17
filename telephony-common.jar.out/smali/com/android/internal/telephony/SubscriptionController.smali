@@ -1354,19 +1354,7 @@
     move-result-object v14
 
     .local v14, "countryIso":Ljava/lang/String;
-    const-string v1, "sub_state"
-
-    move-object/from16 v0, p1
-
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
-
-    move-result v1
-
-    move-object/from16 v0, p1
-
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v15
+    const/16 v15, -0x1
 
     .local v15, "mStatus":I
     const/16 v16, -0x1
@@ -1427,19 +1415,7 @@
     if-eqz v1, :cond_1
 
     :cond_0
-    const-string v1, "network_mode"
-
-    move-object/from16 v0, p1
-
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
-
-    move-result v1
-
-    move-object/from16 v0, p1
-
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v16
+     const/16 v16, -0x1
 
     :cond_1
     sget-boolean v1, Lcom/android/internal/telephony/SubscriptionController;->SHIP_BUILD:Z
@@ -11069,49 +11045,6 @@
     invoke-direct {v2, v3}, Landroid/content/ContentValues;-><init>(I)V
 
     .local v2, "value":Landroid/content/ContentValues;
-    const-string v3, "sub_state"
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    iget-object v3, p0, Lcom/android/internal/telephony/SubscriptionController;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v3
-
-    sget-object v4, Landroid/telephony/SubscriptionManager;->CONTENT_URI:Landroid/net/Uri;
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "_id="
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    const/4 v6, 0x0
-
-    invoke-virtual {v3, v4, v2, v5, v6}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
-
-    move-result v1
 
     goto :goto_0
 .end method
